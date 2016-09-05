@@ -24,13 +24,13 @@ THE SOFTWARE.
 */
 
 // the user name for access to the Unifi Controller
-$controlleruser     = $_ENV['UNIFI_USER'];
+$controlleruser     = getenv('UNIFI_USER');
 // the password for access to the Unifi Controller
-$controllerpassword = $_ENV['UNIFI_PASSWORD'];
+$controllerpassword = getenv('UNIFI_PASSWORD');
 // full url to the Unifi Controller, eg. 'https://22.22.11.11:8443'
-$controllerurl      = $_ENV['UNIFI_URL'];
+$controllerurl      = getenv('UNIFI_URL');
 // the version of the Controller software, eg. '4.6.6' (must be at least 4.0.0)
-$controllerversion  = $_ENV['UNIFI_VERSION'];
+$controllerversion  = getenv('UNIFI_VERSION');
 
 $cookietimeout      = '3600';      // time of inactivity in seconds, after which the PHP session cookie will be refreshed
                                    // after the cookie refresh the site and data collection will need to be selected again
